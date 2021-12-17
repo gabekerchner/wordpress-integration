@@ -502,6 +502,11 @@ Thanks goes to these wonderful people:
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/gabekerchner"><img src="https://avatars.githubusercontent.com/u/89463285?v=4" width="100px;" alt=""/><br /><sub><b>Gabe Kerchner</b></sub></a><br /><a href="#" title="Code">💻</a></td>
+  </tr>
+</table>
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
 
