@@ -167,6 +167,7 @@ The Wordpress Integration app provides the following blocks for your use:
 | `showAuthors`      | `boolean`       | Whether the post author should be shown (`true`) or not (`false`).                                                                                                                                                                          | `false`                  |
 | `showExcerpts`     | `boolean`       | Whether the post excerpts should be shown (`true`) or not (`false`).                                                                                                                                                                        | `false`                  |
 | `mediaSize`        | `MediaSizeEnum` | WordPress media image size that should be used in the blog's preview blocks.                                                                                                                                                                | `full`                   |
+| `sliderLayoutConfig`        | `object` | Allows you to use all the props of the Slider Layout app. See more information [here](https://vtex.io/docs/app/vtex.slider-layout@0.22.0/)                                                                                                                                                                | -                   |
 
 | `absoluteLinks` | `boolean` | Whether the links from each blog post should point to the external blog in a new tab (`true`) or not (`false`). | `false` |
 

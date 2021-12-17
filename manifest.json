@@ -19,6 +19,7 @@
     "postreleasy": "vtex publish --verbose"
   },
   "dependencies": {
+    "vtex.slider-layout": "0.x",
     "vtex.blog-interfaces": "0.x",
     "vtex.store": "2.x",
     "vtex.styleguide": "9.x",

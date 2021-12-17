@@ -4,6 +4,7 @@ import { defineMessages } from 'react-intl'
 import { Spinner } from 'vtex.styleguide'
 import { useCssHandles } from 'vtex.css-handles'
 import { useRuntime } from 'vtex.render-runtime'
+import { SliderLayout } from 'vtex.slider-layout'
 
 import WordpressTeaser from './WordpressTeaser'
 import AllPosts from '../graphql/AllPosts.graphql'
@@ -35,6 +36,7 @@ const WordpressLatestPostsBlock: StorefrontFunctionComponent<WPLatestPostsBlockP
   excludeCategories,
   customDomain,
   customDomainSlug,
+  sliderLayoutConfig,
 }) => {
   const { route } = useRuntime()
   const { loading, error, data } = useQuery(AllPosts, {
@@ -134,7 +136,8 @@ const WordpressLatestPostsBlock: StorefrontFunctionComponent<WPLatestPostsBlockP
                 </div>
               </Fragment>
             ) : (
-              posts.map((post: PostData, index: number) => (
+              <SliderLayout {...sliderLayoutConfig}>
+              {posts.map((post: PostData, index: number) => (
                 <div
                   key={index}
                   className={`${handles.latestPostsBlockFlexItem} mv3 w-33-l ph2 w-100-s`}
@@ -160,7 +163,8 @@ const WordpressLatestPostsBlock: StorefrontFunctionComponent<WPLatestPostsBlockP
                     useTextOverlay={useTextOverlays}
                   />
                 </div>
-              ))
+              ))}
+              </SliderLayout>
             )}
           </div>
         </Fragment>
@@ -193,6 +197,7 @@ interface WPLatestPostsBlockProps {
   mediaSize: MediaSize
   customDomain: string
   customDomainSlug: string
+  sliderLayoutConfig: object
 }
 
 WordpressLatestPostsBlock.defaultProps = {
